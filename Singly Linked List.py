@@ -11,6 +11,13 @@ class SLL:
         while(temp):
             print(temp.data)
             temp = temp.next
+    def append(self, newdata):
+        newnode = Node(newdata)
+        temp = self.head
+        while(temp.next):
+            temp = temp.next
+        temp.next = newnode    
+        
             
 if __name__=='__main__':
     LL = SLL()
@@ -22,4 +29,5 @@ if __name__=='__main__':
         new = Node(num)
         temp.next = new
         temp = new
-    LL.printL()                         
+    LL.append(100)
+    LL.printL()                       
