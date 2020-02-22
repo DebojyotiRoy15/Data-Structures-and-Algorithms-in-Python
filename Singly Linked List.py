@@ -14,9 +14,12 @@ class SLL:
             
 if __name__=='__main__':
     LL = SLL()
-    LL.head = Node(10)
-    two = Node(20)
-    three = Node(30)
-    LL.head.next = two
-    two.next = three
-    LL.printL()              
+    num1 = input()
+    LL.head = Node(num1)
+    temp = LL.head
+    for i in range(0,4):
+        num = input()
+        new = Node(num)
+        temp.next = new
+        temp = new
+    LL.printL()                         
