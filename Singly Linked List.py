@@ -17,7 +17,10 @@ class SLL:
         while(temp.next):
             temp = temp.next
         temp.next = newnode    
-        
+    def push(self, newdata):
+        newnode = Node(newdata)
+        newnode.next = self.head
+        self.head = newnode
             
 if __name__=='__main__':
     LL = SLL()
